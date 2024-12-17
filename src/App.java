@@ -1,4 +1,5 @@
 import Algorithms.Sorting.BubbleSort;
+import Algorithms.Sorting.InsertionSort;
 import Algorithms.Sorting.SelectionSort;
 import Utils.Helper;
 
@@ -17,7 +18,8 @@ public class App {
 
         int[] arr = {3, -2, 4, 45, 0};
         // BubbleSort sort = new BubbleSort();
-        SelectionSort sort = new SelectionSort();
+        // SelectionSort sort = new SelectionSort();
+        InsertionSort sort = new InsertionSort();
         sort.sort(arr);
         Helper.printArray(arr);
     }
