@@ -26,8 +26,8 @@ public class QuickSort implements SortAlgorithm {
             if (arr[j] <= pivot)
                 Helper.swapArrayElements(arr, ++i, j);
         }
-        Helper.swapArrayElements(arr, high, i+1);
-        return i+1;
+        Helper.swapArrayElements(arr, high, i + 1);
+        return i + 1;
     }
 
 }
