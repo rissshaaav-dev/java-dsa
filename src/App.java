@@ -1,6 +1,7 @@
 import Algorithms.Sorting.BubbleSort;
 import Algorithms.Sorting.InsertionSort;
 import Algorithms.Sorting.MergeSort;
+import Algorithms.Sorting.QuickSort;
 import Algorithms.Sorting.SelectionSort;
 import Utils.Helper;
 
@@ -21,7 +22,8 @@ public class App {
         // BubbleSort sort = new BubbleSort();
         // SelectionSort sort = new SelectionSort();
         // InsertionSort sort = new InsertionSort();
-        MergeSort sort = new MergeSort();
+        // MergeSort sort = new MergeSort();
+        QuickSort sort = new QuickSort();
         sort.sort(arr);
         Helper.printArray(arr);
     }
