@@ -3,6 +3,7 @@ import Algorithms.Sorting.InsertionSort;
 import Algorithms.Sorting.MergeSort;
 import Algorithms.Sorting.QuickSort;
 import Algorithms.Sorting.SelectionSort;
+import DataStructures.Linear.CircularQueue;
 import DataStructures.Linear.Queue;
 import Utils.Helper;
 
@@ -28,7 +29,7 @@ public class App {
         // sort.sort(arr);
         // Helper.printArray(arr);
 
-        Queue queue = new Queue(5);
+        CircularQueue queue = new CircularQueue(5);
         queue.enQueue(10);
         queue.enQueue(20);
         queue.enQueue(30);
