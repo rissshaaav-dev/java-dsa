@@ -1,4 +1,4 @@
-package DataStructures.Linear;
+package datastructures.linear;
 
 public class Stack {
     private int[] arr;

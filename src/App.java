@@ -1,11 +1,11 @@
-import Algorithms.Sorting.BubbleSort;
-import Algorithms.Sorting.InsertionSort;
-import Algorithms.Sorting.MergeSort;
-import Algorithms.Sorting.QuickSort;
-import Algorithms.Sorting.SelectionSort;
-import DataStructures.Linear.CircularQueue;
-import DataStructures.Linear.Queue;
-import Utils.Helper;
+import algorithms.sorting.BubbleSort;
+import algorithms.sorting.InsertionSort;
+import algorithms.sorting.MergeSort;
+import algorithms.sorting.QuickSort;
+import algorithms.sorting.SelectionSort;
+import datastructures.linear.CircularQueue;
+import datastructures.linear.Queue;
+import utils.Helper;
 
 public class App {
     public static void main(String[] args) throws Exception {

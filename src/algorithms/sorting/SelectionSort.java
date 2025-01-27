@@ -1,6 +1,6 @@
-package Algorithms.Sorting;
+package algorithms.sorting;
 
-import Utils.Helper;
+import utils.Helper;
 
 public class SelectionSort implements SortAlgorithm {
 

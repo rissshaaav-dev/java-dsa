@@ -1,4 +1,4 @@
-package Algorithms.Sorting;
+package algorithms.sorting;
 
 public interface SortAlgorithm {
     void sort(int[] arr);

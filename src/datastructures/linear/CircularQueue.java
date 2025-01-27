@@ -1,12 +1,12 @@
-package DataStructures.Linear;
+package datastructures.linear;
 
-public class Queue {
+public class CircularQueue {
     private int[] arr;
     private int capacity;
     private int front;
     private int rear;
 
-    public Queue(int size) {
+    public CircularQueue(int size) {
         capacity = size;
         arr = new int[capacity];
         front = -1;
@@ -14,7 +14,7 @@ public class Queue {
     }
 
     public boolean isFull() {
-        return rear == capacity - 1;
+        return (rear+1)%capacity == front;
     }
 
     public boolean isEmpty() {
@@ -25,24 +25,20 @@ public class Queue {
         if (!isFull()) {
             if (front == -1)
                 front = 0;
-            arr[++rear] = element;
-            // above line equivalent to:
-            // rear++;
-            // arr[rear] = element;
+            rear = (rear+1)%capacity;
+            arr[rear] = element;
         } else
             throw new IllegalStateException("Queue Overflow: Queue is already full.");
     }
 
     public int deQueue() {
         if (!isEmpty()) {
-            int value = arr[front++];
-            // above line equivalent to:
-            // int value = arr[front];
-            // front++;
-            if (front > rear) {
+            int value = arr[front];
+            if (front == rear) {
                 front = -1;
                 rear = -1;
             }
+            else front = (front+1)%capacity;
             return value;
         } else
             throw new IllegalStateException("Queue Underflow: Queue is already empty.");
@@ -57,11 +53,12 @@ public class Queue {
 
     public void display() {
         if (isEmpty())
-            throw new IllegalStateException("Queue Underflow: Stack is empty");
+            throw new IllegalStateException("Queue Underflow: Queue is empty");
         System.out.print("Queue content (front to rear): ");
-        for (int i = front; i <= rear; i++) {
+        for (int i = front; i != rear; i = (i + 1) % capacity) {
             System.out.print(arr[i] + " ");
         }
+        System.out.print(arr[rear] + " ");
         System.out.println();
     }
 }

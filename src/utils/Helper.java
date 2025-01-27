@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 public class Helper {
     public static void printArray(int[] arr) {
